@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Ecommerce Website</title>
+</head>
+
+<body>
+    <header>
+        <!-- Start of Topbar -->
+        <nav class="topbar">
+            <div class="container">
+                <div class="topbar-content">
+                    <div class="topbar-right__section">
+                        <div class="language-dropdown border-right">
+                            <select>
+                                <option value="en">🇺🇬 English</option>
+                                <option value="es">🇺🇸 Spanish</option>
+                                <option value="fr">🇫🇷 French</option>
+                            </select>
+                        </div>
+                        <div class="currency-dropdown border-right">
+                            <select>
+                                <option value="usd">United States(USD $)</option>
+                                <option value="eur">Japan(JPY $)</option>
+                                <option value="gbp">United Kingdom(GBP £)</option>
+                            </select>
+                        </div>
+                        <div class="need-help">
+                            Need Help? +001 123 456 789
+                        </div>
+                    </div>
+                    <div class="topbar-left__section">
+                        <li class="border-right">
+                            <a href="#">About Us</a>
+                        </li>
+                        <li class="border-right">
+                            <a href="#">Order Tracking</a>
+                        </li class="border-right">
+                        <li class="border-right">
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li class="border-right">
+                            <a href="#">FAQs</a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Start of Midbar -->
+        <nav class="midbar">
+            <div class="container">
+                <div class="midbar-content">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="right-content">
+                        <div class="search-component">
+                            <div class="categories-selector">
+                                <select name="" id="" class="categories-dropdown">
+                                    <option value=" all-categories">All Categories</option>
+                                    <option value="smartphones">Smartphones</option>
+                                    <option value="laptops">Laptops</option>
+                                    <option value="fragrances">Fragrances</option>
+                                    <option value="skincare">Skincare</option>
+                                    <option value="groceries">Groceries</option>
+                                    <option value="home-decoration">Home Decoration</option>
+                                </select>
+                            </div>
+                            <div class="search-bar">
+                                <input type="text" placeholder="Search for products..." class="search-input">
+                                <button class="search-button"><i class='bx bx-search'></i></button>
+                            </div>
+                        </div>
+                        <a href="#" class="action-icon">
+                            <i class='bx bx-user icon'></i>
+                            <div>
+                                <span class="action-text">
+                                    Login
+                                </span>
+                                <p class="action-text-2">Account</p>
+                            </div>
+                        </a>
+                        <a href="#" class="action-icon">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="badge">0</span>
+                            <div>
+                                <span class="action-text">
+                                    Favorite
+                                </span>
+                                <p class="action-text-2">My Wishlist</p>
+                            </div>
+                        </a>
+                        <a href="#" class="action-icon">
+                            <i class='bx bx-cart icon'></i>
+                            <span class="badge">0</span>
+                            <div>
+                                <span class="action-text">
+                                    Your Cart
+                                </span>
+                                <p class="action-text-2">$0.00</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End of Midbar-->
+
+        <!-- Start of Bottom bar -->
+        <nav class="bottom-bar">
+            <div class="container">
+                <div class="bottom-bar-content">
+                    <div class="all-categories">
+                     <div class="dropdown-dep">
+                        <i class='bx bx-menu'></i>
+                        <span>SHOP BY DEPARTMENT</span>
+                        <div class="dropdown-content">
+                            <li><a href="">Mobile Applications</a></li>
+                            <li><a href="">Headsets</a></li>
+                            <li><a href="">Batteries</a></li>
+                            <li><a href="">JBL Speakers</a></li>
+                            <li><a href="">Iphones</a></li>
+                            <li><a href="">Fashion Accessories</a></li>
+                        </div>
+                     </div>
+                    </div>
+                    <ul class="nav-links">
+                        <li class="dropdown-parent"><a href="">HOME <span class="bx bx-chevron-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Flat</a></li>
+                                <li><a href="">Accessories</a></li>
+                                <li><a href="">Hooder</a></li>
+                                <li><a href="">Sofa</a></li>
+                                <li><a href="">Beauty</a></li>
+                                <li><a href="">Cosmetics</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="dropdown-parent"><a href="">SHOP <span class="bx bx-chevron-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Flat</a></li>
+                                <li><a href="">Accessories</a></li>
+                                <li><a href="">Hooder</a></li>
+                                <li><a href="">Sofa</a></li>
+                                <li><a href="">Beauty</a></li>
+                                <li><a href="">Cosmetics</a></li>
+                            </ul>
+                        </li>
+
+                       <li class="dropdown-parent"><a href="">PRODUCT <span class="bx bx-chevron-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Flat</a></li>
+                                <li><a href="">Accessories</a></li>
+                                <li><a href="">Hooder</a></li>
+                                <li><a href="">Sofa</a></li>
+                                <li><a href="">Beauty</a></li>
+                                <li><a href="">Cosmetics</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-parent"><a href="">PAGES <span class="bx bx-chevron-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Flat</a></li>
+                                <li><a href="">Accessories</a></li>
+                                <li><a href="">Hooder</a></li>
+                                <li><a href="">Sofa</a></li>
+                                <li><a href="">Beauty</a></li>
+                                <li><a href="">Cosmetics</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-parent"><a href="">BLOG<span class="bx bx-chevron-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Flat</a></li>
+                                <li><a href="">Accessories</a></li>
+                                <li><a href="">Hooder</a></li>
+                                <li><a href="">Sofa</a></li>
+                                <li><a href="">Beauty</a></li>
+                                <li><a href="">Cosmetics</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-parent"><a href="">CONTACT US<span class="bx bx-chevron-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Flat</a></li>
+                                <li><a href="">Accessories</a></li>
+                                <li><a href="">Hooder</a></li>
+                                <li><a href="">Sofa</a></li>
+                                <li><a href="">Beauty</a></li>
+                                <li><a href="">Cosmetics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="discount-word">
+                        <div>
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.08737 14.2867L1.48898 12.6883C0.837006 12.0363 0.837006 10.9637 1.48898 10.3117L3.08737 8.71331C3.36078 8.4399 3.58161 7.90359 3.58161 7.52502V5.26411C3.58161 4.33872 4.33875 3.58161 5.26414 3.58161H7.52502C7.90359 3.58161 8.4399 3.36081 8.71331 3.0874L10.3117 1.48898C10.9637 0.837006 12.0363 0.837006 12.6883 1.48898L14.2867 3.0874C14.5601 3.36081 15.0964 3.58161 15.4749 3.58161H17.7359C18.6612 3.58161 19.4184 4.33872 19.4184 5.26411V7.52502C19.4184 7.90359 19.6392 8.4399 19.9126 8.71331L21.511 10.3117C22.163 10.9637 22.163 12.0363 21.511 12.6883L19.9126 14.2867C19.6392 14.5601 19.4184 15.0964 19.4184 15.475V17.7358C19.4184 18.6612 18.6612 19.4184 17.7359 19.4184H15.4749C15.0964 19.4184 14.5601 19.6392 14.2867 19.9126L12.6883 21.511C12.0363 22.163 10.9637 22.163 10.3117 21.511L8.71331 19.9126C8.4399 19.6392 7.90359 19.4184 7.52502 19.4184H5.26414C4.33875 19.4184 3.58161 18.6612 3.58161 17.7358V15.475C3.58161 15.0859 3.36078 14.5496 3.08737 14.2867Z"
+                                    fill="#16bcdc"></path>
+                                <path
+                                    d="M3.08737 14.2867L1.48898 12.6883C0.837006 12.0363 0.837006 10.9637 1.48898 10.3117L3.08737 8.71331C3.36078 8.4399 3.58161 7.90359 3.58161 7.52502V5.26411C3.58161 4.33872 4.33875 3.58161 5.26414 3.58161H7.52502C7.90359 3.58161 8.4399 3.36081 8.71331 3.0874L10.3117 1.48898C10.9637 0.837006 12.0363 0.837006 12.6883 1.48898L14.2867 3.0874C14.5601 3.36081 15.0964 3.58161 15.4749 3.58161H17.7359C18.6612 3.58161 19.4184 4.33872 19.4184 5.26411V7.52502C19.4184 7.90359 19.6392 8.4399 19.9126 8.71331L21.511 10.3117C22.163 10.9637 22.163 12.0363 21.511 12.6883L19.9126 14.2867C19.6392 14.5601 19.4184 15.0964 19.4184 15.475V17.7358C19.4184 18.6612 18.6612 19.4184 17.7359 19.4184H15.4749C15.0964 19.4184 14.5601 19.6392 14.2867 19.9126L12.6883 21.511C12.0363 22.163 10.9637 22.163 10.3117 21.511L8.71331 19.9126C8.4399 19.6392 7.90359 19.4184 7.52502 19.4184H5.26414C4.33875 19.4184 3.58161 18.6612 3.58161 17.7358V15.475C3.58161 15.0859 3.36078 14.5496 3.08737 14.2867Z"
+                                    fill="#16bcdc" stroke="#16bcdc" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M8 15.0909L15.0909 8" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M14.4937 14.5H14.5043" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M8.58442 8.59091H8.59503" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <span>
+                            Sale $20 Off Your First Order.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End of Bottom bar -->
+
+    </header>
+    <div class="main-content">
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class ="hero-cards">
+                    <img src="" alt="">
+                    <div class="hero-card-description">
+                        <h1>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/dropdown.js"></script>
+</body>
+</html>
