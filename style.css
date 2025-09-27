@@ -5,6 +5,7 @@
 }
 body {
     background-color: #f8f5f5;
+    font-family: 'Poppins', sans-serif;
 
 }
 /* Utility classes */
@@ -14,11 +15,31 @@ body {
 
 /* End of Utility classes */
 
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color: #c1c1c1;
+    
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#050505;
+}
+::-webkit-scrollbar-button{
+    display:none;
+}
 * {
     font-family: 'Rubik', sans-serif;
     padding: 0;
     margin: 0;
     /* color: #333; */
+}
+*::before,*::after{
+    box-sizing: border-box;
 }
 
 a,
@@ -31,6 +52,7 @@ li {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+
 }
 
 .topbar {
@@ -217,109 +239,58 @@ li {
         padding: 10px 0;
         
 
-        .all-categories {
-      position: relative;
-      
-    }
-
-    /* Dropdown button */
-    .dropdown-dep {
-      cursor: pointer;
-      padding: 10px 15px;
-      color: white;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      
-    }
-
-    
-    /* Dropdown content */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 50px;
-      left: 0;
-      background: white;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-      border-radius: 5px;
-      min-width: 400px;
-      z-index: 1000;
-    }
-
-    .dropdown-content li {
-      list-style: none;
-    }
-
-    .dropdown-content li a {
-      display: block;
-      padding: 10px;
-      color: #333;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .dropdown-content li a:hover {
-      background: #f0f0f0;
-      color: #000;
-    }
-
-    /* Show on hover */
-    .all-categories:hover .dropdown-content {
-      display: block;
-    }
-
-        .discount-word {
-            display: flex;
-            margin-left: auto;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 12px;
-            color: white;
-        }
-
-        
+   
 
         .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+            justify-content: space-between;
+            align-items: center;
+            color:white;
             display: flex; 
+            width:55%;
+            gap:40px;
             
         }
+
+        .right-nav-link{
+            display:flex;
+            justify-content: space-between;
+            gap:15px;
+        }
+        
 
         .nav-links li {
             position: relative; 
         }
 
-        .nav-links > li > a {
+        .left-nav-link > li > a, .right-nav-link > li > a {
             display: block;
-            padding: 15px 20px;
             color: white;
+            padding:3px;
             text-decoration: none;
             transition: background-color 0.3s;
             border-bottom: 3px solid transparent;
         }
 
-        .nav-links > li > a:hover {
-            background-color: #2980b9;
+        .left-nav-link > li > a:hover, .right-nav-link > li > a:hover {
+             border-bottom: 2px solid #2980b9;
         }
 
-        .nav-links > li > a.active-link {
-            background-color: #2980b9;
+        .left-nav-links > li > a.active-link ,.right-nav-link > li >a.active{
+            background-color: #07609b;
             
         }
 
        
+       }
+       /*general dropdown*/
+
         .dropdown-menu {
             display: none; 
             position: absolute; 
-            top: 60px; 
+            top: 40px; 
             left: 0;
             background-color: white; 
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 16px var(--tertiary-color);
             list-style: none;
             padding: 0;
             min-width: 400px; 
@@ -336,47 +307,105 @@ li {
             display: block; 
             padding: 12px 16px;
             text-decoration: none;
-            color: #333;
+            color: #000000;
             white-space: nowrap; 
             transition: background-color 0.2s;
         }
 
         .dropdown-menu a:hover {
-            background-color: #f1f1f1;
+            background-color: var(--tertiary-color);
         }
 
-        .dropdown-parent:hover > .dropdown-menu {
-            display: block;
-        } 
+        
         .dropdown-show {
             display: block !important;
         }
+/*botton down nav dropdown*/
+        .menu-content-shop{
+            background:#f1f1f1;
+            box-shadow: 0 0 10px  var(--tertiary-color);
+            border-radius:10px;
+            display:flex;
+            width:1000px;
+            padding:10px;
+            justify-content: space-between;
+            
+            
+        }
+        .menu-content-home{
+            background:#f1f1f1;
+            box-shadow: 0 0 10px  var(--tertiary-color);
+            border-radius:10px;
+            display:flex;
+            width:600px;
+            padding:10px;
+            justify-content: space-around;
+        }
+        .menu-content-shop h1, .menu-content-home h1{
+            font-size: medium;
+            color:black;
+            margin-bottom: 20px;
+        }
+        .menu-content-shop li>a{
+            display: block;
+            color: rgb(24, 22, 22);
+            padding:3px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            line-height:30px;
+        }
+        .menu-content-shop li>a:hover{
+            background: var(--tertiary-color);
+        }
+        
+        .menu-content-shop .shop-image button{
+            margin-top:250px;
+            margin-left:60px; 
+            padding:10px;
+            border-radius:10px;
+            border:none;
+            text-align:center;
+        }
+        
+
+
+         .chevron-icon {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-parent.active .chevron-icon {
+    transform: rotate(180deg);
+}
 
             
             
             
-            
         }
-    }
+    
 
  
 /*Hero section style*/
 .main-content{
     min-height: 100vh;
+    max-width: 1400px;
     width: 100%;
-    padding: 20px 0;
+    margin:  0 auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+   
 }
 .hero-section {
-  padding: 0 20px;
-  background-color: inherit;
+  padding: 20px;
+ 
   margin-top:20px;
   border-radius: 12px;
   width: 100%;
-  max-width: 1400px;
+  justify-content: space-between;
+ 
+
 }
 
 .hero-container {
@@ -386,6 +415,7 @@ li {
   gap: 20px;
   height: 390px;
   align-items: stretch;
+ 
 }
 
 /* Main Left Hero Banner */
@@ -396,6 +426,7 @@ li {
   border-radius: 12px;
   display: flex;
   align-items: center;
+  margin: 0;
   justify-content: space-between;
 }
 
@@ -433,7 +464,7 @@ li {
 /* Right Side Items */
 .hero-side {
   display: grid;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: 300px 300px;
   gap: 15px;
 }
 
@@ -472,7 +503,6 @@ li {
 .trending-product-section {
   margin-top:40px;
   width: 100%;
-  max-width: 1400px;
   align-items: center;
   justify-content: center;
   
@@ -487,7 +517,7 @@ li {
     height: 50px;
     text-align: center;
     align-items: center;
-    padding: 0 20px;
+    
    
     
   }
@@ -518,19 +548,20 @@ li {
 .trending-product{
    display: flex;
    flex-wrap: wrap;
-    gap: 20px;
-    overflow-x: auto;
+    gap: 23px;
+    overflow-x: hidden;
     padding-bottom: 10px;
     align-items:  center;
     justify-content: center;
+    
 
 }
 .trending-product-card{
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 170px;
-    height: 350px;
+    width: 180px;
+    height: 380px;
     flex: 0 0 auto;
     scroll-snap-align: start;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -538,7 +569,7 @@ li {
     justify-items: center;
     align-items: center;
     text-align: left;
-    padding: 15px;
+    
 }
 .trending-product-card:hover{
     transform: translateY(-5px);
@@ -551,7 +582,7 @@ li {
     object-fit: contain;
     border-radius: 12px 12px 0 0;
     background-color: #f9f9f9;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 .trending-product-description{
     margin-top: 2px;
