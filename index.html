@@ -331,34 +331,102 @@
           <div class="top-bar-mobile">
             <div class="top-mobile">
                 <div class="menu">
-                    <a href=""><i class = 'bx bx-menu'></i></a>
+                    <button class="hamburger-btn" id="hamburger-btn">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
                 </div>
             </div>
             <div class="top-mobile">
                 <div class="logo">
-                    <img src="images/logo.png" alt="">
+                    <img src="images/logo.png" alt="Logo">
                 </div>
             </div>
             <div class="top-mobile">
-                <div shop-chart>
-                    <a href=""><i class = 'bx bx-cart'></i></a>
+                <div class="mobile-actions">
+                    <a href="#" class="mobile-action-icon">
+                        <i class='bx bx-user'></i>
+                        <span class="badge">0</span>
+                    </a>
+                    <a href="#" class="mobile-action-icon">
+                        <i class='bx bx-heart'></i>
+                        <span class="badge">0</span>
+                    </a>
+                    <a href="#" class="mobile-action-icon">
+                        <i class='bx bx-cart'></i>
+                        <span class="badge">0</span>
+                    </a>
                 </div>
             </div>
           </div>
           <div class="bottom-mobile">
-                     <div style="position:relative;width:100%;">
-                         <input type="search" name="search" id="search" style="width:100%;padding-right:40px;">
-                         <span style="position:absolute;right:14px;top:50%;transform:translateY(-50%);color:#f1f1f1;font-size:22px;pointer-events:none; padding:5px; border-radius:50%;">
-                             <i class='bx bx-search' style="color:white;background:var(--navbar-color);"></i>
-                         </span>
+                     <div class="search-container">
+                         <input type="search" name="search" id="search" placeholder="Search for products...">
+                         <button class="search-btn">
+                             <i class='bx bx-search'></i>
+                         </button>
                      </div>
           </div>
+          
+          <!-- Mobile Navigation Menu -->
+          <div class="mobile-nav" id="mobile-nav">
+              <div class="mobile-nav-header">
+                  <div class="logo">
+                      <img src="images/logo.png" alt="Logo">
+                  </div>
+                  <button class="close-btn" id="close-btn">
+                      <i class='bx bx-x'></i>
+                  </button>
+              </div>
+              
+              <div class="mobile-nav-content">
+                  <div class="mobile-nav-section">
+                      <h3>Shop by Department</h3>
+                      <ul class="mobile-nav-links">
+                          <li><a href="#">Computer & Desktop</a></li>
+                          <li><a href="#">Laptop & iPad</a></li>
+                          <li><a href="#">Cameras & Photos</a></li>
+                          <li><a href="#">Smart Phones & Tablets</a></li>
+                          <li><a href="#">Home & Kitchen</a></li>
+                          <li><a href="#">TV & Audio</a></li>
+                          <li><a href="#">Health & Beauty</a></li>
+                          <li><a href="#">Watches & Eyewear</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="mobile-nav-section">
+                      <h3>Main Menu</h3>
+                      <ul class="mobile-nav-links">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Shop</a></li>
+                          <li><a href="#">Products</a></li>
+                          <li><a href="#">Pages</a></li>
+                          <li><a href="#">Blog</a></li>
+                          <li><a href="#">Contact Us</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="mobile-nav-section">
+                      <h3>Account</h3>
+                      <ul class="mobile-nav-links">
+                          <li><a href="#">Login</a></li>
+                          <li><a href="#">Register</a></li>
+                          <li><a href="#">Order Tracking</a></li>
+                          <li><a href="#">FAQs</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Mobile Nav Overlay -->
+          <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
         </div>     
     </header>
 
     <div class="main-content">
         <!--hero section-->
-        <section class="hero-section">
+        <section class="hero-section container">
             <div class="hero-container">
                 <div class ="hero-main"  style="background: url(images/beats.png) center/cover no-repeat;">
                     <div class="hero-main-description">
@@ -403,7 +471,7 @@
         <!--End of Hero section-->
         <!--trending products-->
         <section class="trending-product-section">
-            <div class="trending-products-header">
+            <div class="trending-products-header container">
                 <h2>Hot Trending Products</h2>
                 <a href="">View All Products</a>
             </div>
