@@ -1382,11 +1382,12 @@ li {
 /*trade mark logo*/
 .trade-logo{
     display:flex;
+    justify-content: space-around;
     flex-wrap:wrap;
-    background:navy;
-    gap:22px;
+    background:rgb(231, 231, 235);
+    gap:20px;
     padding: 15px 0 15px 0;
-    height:40px;
+    height:60px;
     border-radius:10px;
     margin-bottom:50px;
 
