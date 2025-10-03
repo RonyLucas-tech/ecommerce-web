@@ -1,3 +1,43 @@
+// Hero Main Carousel Functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.hero-main.carousel');
+    if (!carousel) return;
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const prevBtn = carousel.querySelector('.carousel-btn.prev');
+    const nextBtn = carousel.querySelector('.carousel-btn.next');
+    const indicators = carousel.querySelectorAll('.indicator');
+    let current = 0;
+
+    function showSlide(idx) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === idx);
+        });
+        indicators.forEach((ind, i) => {
+            ind.classList.toggle('active', i === idx);
+        });
+        current = idx;
+    }
+
+    prevBtn.addEventListener('click', function () {
+        let idx = (current - 1 + slides.length) % slides.length;
+        showSlide(idx);
+    });
+    nextBtn.addEventListener('click', function () {
+        let idx = (current + 1) % slides.length;
+        showSlide(idx);
+    });
+    indicators.forEach((ind, i) => {
+        ind.addEventListener('click', function () {
+            showSlide(i);
+        });
+    });
+
+    // Optional: Auto-slide every 5 seconds
+    setInterval(() => {
+        let idx = (current + 1) % slides.length;
+        showSlide(idx);
+    }, 5000);
+});
 // dropdown.js
 
 document.addEventListener("DOMContentLoaded", function () {
