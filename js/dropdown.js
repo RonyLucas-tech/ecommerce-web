@@ -279,6 +279,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+const carousel = document.querySelector('.trending-product');
+const nextBtn = document.querySelector('.carousel-btn.next');
+const prevBtn = document.querySelector('.carousel-btn.prev');
 
+nextBtn.addEventListener('click', () => {
+  carousel.scrollBy({ left: 250, behavior: 'smooth' });
+});
 
+prevBtn.addEventListener('click', () => {
+  carousel.scrollBy({ left: -250, behavior: 'smooth' });
+});
 

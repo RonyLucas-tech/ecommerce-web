@@ -102,8 +102,13 @@ body {
     padding: 0;
     margin: 0;
     font-size: 80%;
-    /* color: #333; */
+    /* color: #333; img{
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+}*/
 }
+
 
 *::before,
 *::after {
@@ -208,6 +213,59 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
+    
+
+        .logo {
+  display: inline-flex;
+  position: relative;
+  padding: 0 40px;
+  border-radius: 6px;
+ align-items: flex-start;
+  color: white;
+  font-family: sans-serif;
+ 
+
+
+.brand {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin-right: 1rem;
+}
+.brand::after{
+    content: ".";
+    color: #f01000;
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+    top: 10px;
+}
+
+.badges {
+  position: absolute;
+  top: 8px;
+  right: -10px;
+  background-color: #ff0000;  /* red badge color */
+  color: #fff;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+        
+.badges::before {
+  content: "";
+  position: absolute;
+  left: -10px;  /* position so the arrow sits partly outside the red badge */
+  top: 50%;
+  transform: translateY(-55%);
+  border: 6px solid transparent;
+  border-right-color: #Ff0000;  /* arrow pointing left: the right edge of the triangle is colored red */
+}
+        }
 
 
         .search-component {
@@ -837,7 +895,7 @@ header{
 }
 
 .trending-products-header h2 , .popular-header h2 ,.top-deals-header h2, .top-featured-header h2, .blog-header h2 , .recommend-products-header h2 {
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: 500;
     color: #333;
     position: relative;
@@ -1022,6 +1080,8 @@ header{
     font-size: 1.1rem;
     margin-bottom: 0.875rem;
 }
+
+
 
 /*==========TRENDING-PRODUCT-CONTAINER==========*/
 .trending-product {
@@ -1595,6 +1655,7 @@ header{
     justify-items: center;
     align-items: center;
     position:relative;
+    font-size: 2vw;
 
 
     .blog-image{
@@ -1622,10 +1683,10 @@ header{
             color:#000;
             font-weight: var(--font-weight-bold);
             margin-bottom: 10px;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         p ,h3{
-            font-size: 1.2rem;
+            font-size: 0.99rem;
             color: #777;
         }
         p>a{
@@ -1636,12 +1697,15 @@ header{
     }
     .blog-read{
             display:flex;
+            align-items: center;
             justify-content: space-between;
             margin: 15px 0 15px 0 ;
             gap: 2.5rem;
             
             a{
                   color: #000;
+                  border: solid 1px #777;
+                  padding: 0.5rem 0;
             }
         }
     .blog-trend{
@@ -1964,7 +2028,7 @@ RESPONSIVENESS STYLE
     
 }
 
-@media screen and  (max-width: 600px) {
+@media screen and  (max-width: 640px) {
     /*==========HIDE DESKTOP NAV==========*/
     html{
         font-size: 80%;
