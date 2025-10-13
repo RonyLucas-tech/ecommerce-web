@@ -1084,30 +1084,64 @@ header{
 
 
 /*==========TRENDING-PRODUCT-CONTAINER==========*/
-.trending-product {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    flex-wrap: wrap;
-    overflow-x: hidden;
-    padding-bottom: 0.875rem;
-    gap: 0.75rem;
-
+.trending-product-section {
+  max-width: 1350px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+  font-family: "Poppins", sans-serif;
 }
 
+
+.swipe-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-items {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* === Cards === */
 .trending-product-card {
-    background-color:#fff;
-    border-radius: 0.875rem;
-    border: solid #e9e3e3 1px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: auto;
-    height:340px;
-    scroll-snap-align: start;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    justify-items: center;
-    text-align: left;
-   
+  min-width: calc(100% / 7 - 10px);
+  margin-right: 10px;
+  background: #f2f2f2;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 12px;
+  color: #333;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
 }
+.carousel-buttons {
+    border:none;
+    padding:15px;
+    background:#777;
+    color:hsl(0, 0%, 100%);
+    top:1px;
+    
+}
+.nav-btn{
+    font-size:1.2rem;
+}
+.nav-btn:hover{
+    background-color: var(--tertiary-color);
+    opacity:1;
+} 
+   #prevBtn{
+    left:5px;
+   }
+   #nextBtn{
+        right:5px;
+   }
+
+
 
 .trending-product-card:hover {
     transform: translateY(1px);
@@ -1124,11 +1158,11 @@ header{
    
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items:center;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     gap: 8px;
-    width: 80%;
+    margin:0 auto;
     word-wrap: break-word;
     overflow: hidden;
     padding-bottom: 1rem;
