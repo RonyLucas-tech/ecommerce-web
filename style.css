@@ -216,14 +216,14 @@ header{
     
 
         .logo {
-  display: inline-flex;
+  display: block;
   position: relative;
-  padding: 0 40px;
+  padding: 1rem;
   border-radius: 6px;
  align-items: flex-start;
   color: white;
   font-family: sans-serif;
- 
+  width: 240px;
 
 
 .brand {
@@ -231,21 +231,21 @@ header{
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  margin-right: 1rem;
+  margin-left: -1.5rem;
 }
 .brand::after{
     content: ".";
     color: #f01000;
     position: absolute;
-    font-size: 2.5rem;
+
     font-weight: bold;
-    top: 10px;
+    top: 14px;
 }
 
 .badges {
   position: absolute;
-  top: 8px;
-  right: -10px;
+  top: 15px;
+  right: 25px;
   background-color: #ff0000;  /* red badge color */
   color: #fff;
   padding: 2px 5px;
@@ -307,7 +307,7 @@ header{
                     border-left: 1px solid #cccccc83 !important;
                     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                     font-size: 14px;
-                    width: 350px;
+                    width: 300px;
                     
                 }
 
@@ -858,8 +858,8 @@ header{
 
 /*==========MAIN CONTENT CONTAINER==========*/
 .container {
-    width:1365px;
-    max-width: 100%;
+    width:100%;
+    max-width: 1365px;
     margin:0 auto;
     padding: 0 1.25rem;
     
