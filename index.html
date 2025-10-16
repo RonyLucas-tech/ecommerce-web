@@ -71,7 +71,7 @@
                       <span class="badges">MARKET PLACE</span>
                     </div>
 
-                    <div class="right-content">
+                    
                         <div class="search-component">
                             <div class="categories-selector">
                                 <select name="" id="" class="categories-dropdown">
@@ -89,6 +89,7 @@
                                 <button class="search-button"><i class='bx bx-search'></i></button>
                             </div>
                         </div>
+                    <div class="right-content">
                         <a href="#" class="action-icon">
                             <i class='bx bx-user icon'></i>
                             <div>
@@ -869,13 +870,14 @@
             </div>
             <div class="top-deals">
                 <div class ="top-deals-card">
-                        <div class="wishlist">
+                    <div class="top-deals-image">
+                         <div class="wishlist">
                             <i class='bx bx-heart'></i>
                             <i class='bx bx-layer'></i>
                             <i class='bx bx-show'></i>
                         </div>
-                    <div class="top-deals-image">
-                        <img src="images/products_9_2.jpg" alt="" srcset="">
+                       <img class="main-img" src="images/products_7_4.jpg"  srcset="">
+                        <img class="hover-img" src="images/products_9_2.jpg" alt="">
                     </div>
                     <div class="top-deals-description">
                         <div class="top-deals-title">Apple Ipad Air 10.9inch wifi 256GB</div>
@@ -912,13 +914,15 @@
                     </div>
                 </div>
                 <div class ="top-deals-card">
-                        <div class="wishlist">
+                       
+                    <div class="top-deals-image">
+                        <img class="main-img" src="images/products_9_2.jpg" alt="">
+                        <img class="hover-img" src="images/products_7_4.jpg" alt="">
+                         <div class="wishlist">
                             <i class='bx bx-heart'></i>
                             <i class='bx bx-layer'></i>
                             <i class='bx bx-show'></i>
                         </div>
-                    <div class="top-deals-image">
-                        <img src="images/products_7_4.jpg"  srcset="">
                     </div>
                     <div class="top-deals-description">
                         <div class="top-deals-title">Apple Ipad Air 10.9inch wifi 256GB</div>
@@ -990,9 +994,10 @@
                 <a href="">View All Products <i class='bx bx-chevron-right'></i></a>
             </div>
             <div class="top-featured-container">
+             <div class="featured-card-container">
                 <div class="top-featured-product featured-card">
-                    <div class="top-featured-image">
-                        <img src="images/products_3_2.jpg" style="width:200px;height:200px;" srcset="">
+                    <div class="featured-image">
+                        <img src="images/products_3_2.jpg" >
                     </div>
                     <div class="top-featured-description">
                          <div class="wishlist"><i class='bx bx-heart'></i></div>
@@ -1017,7 +1022,34 @@
                     </div>
                                        
                 </div>
-                
+                <div class="top-featured-product featured-card">
+                    <div class="featured-image">
+                        <img src="images/products_3_2.jpg" >
+                    </div>
+                    <div class="top-featured-description">
+                         <div class="wishlist"><i class='bx bx-heart'></i></div>
+                        <div class="top-featured-title">Apple Ipad Air 10.9inch wifi 256GB</div>
+                        <div class="top-featured-rating">
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <span>( 4 reviews)</span>
+                        </div>
+                         <div class="top-featured-price">
+                            <span class="current-price"><li>$40.00<del style="color: #777;">$500</del></li></span>
+                        </div>
+                        <div class="top-featured-product-deals">
+                            <li>Screen Size 10.9 inch</li>
+                            <li>Operating System IOS 14.0</li>
+                            <li>Product Lenght 9.74 inch</li>
+                        </div>
+                        <button class="add-cart">Add To Cart</button>
+                    </div>
+                                       
+                </div>
+             </div> 
                 <div class="top-featured-product small-card">
                     <div class="top-featured-image">
                         <img src="images/products_5_2.jpg" style="width:100px;height:100px;" srcset="">
@@ -1164,13 +1196,17 @@
         <!--end of marquee-->
 
          <!--recommend products-->
-        <section class="recommend-product-section">
+        <section class="recommend-product-section  carousel-wrapper">
             <div class="recommend-products-header">
                 <h2>Hot Recommended For You</h2>
                 <a href="">View All Products <i class='bx bx-chevron-right'></i></a>
             </div>
-            <div class="recommend-product">
-                <div class="recommend-product-card">
+            <div class="swipe-wrapper"> 
+                <button id="prevBtn" class="nav-btn"><i class='bx bx-chevron-left'></i></button>
+                <button id="nextBtn" class="nav-btn"><i class='bx bx-chevron-right'></i></button>
+                
+                <div class="swipe-items">
+                    <div class="recommend-product-card">
                     <div class="trending-product-img">
                         <img src="images/products_2_2.jpg" style="width: 170px;" alt="">
                     </div>
@@ -1311,11 +1347,72 @@
                         <button class="add-cart">Add To Cart</button>
                     </div>
                 </div>
+                 <div class="recommend-product-card">
+                    <div class="recommend-product-img">
+                        <img src="images/products_35_2.jpg" style="width: 170px;" alt="">
+                    </div>
+                    <div class="recommend-product-description">
+                        <div class="product-title">Apple Ipad Air 10.9inch wifi 256GB</div>
+                        <div class="product-rating">
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <span>( 4 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price"><li>$40.00</li></span>
+                        </div>
+                        <button class="add-cart">Add To Cart</button>
+                    </div>
+                </div>
+                
+                 <div class="recommend-product-card">
+                    <div class="recommend-product-img">
+                        <img src="images/products_35_2.jpg" style="width: 170px;" alt="">
+                    </div>
+                    <div class="recommend-product-description">
+                        <div class="product-title">Apple Ipad Air 10.9inch wifi 256GB</div>
+                        <div class="product-rating">
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <span>( 4 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price"><li>$40.00</li></span>
+                        </div>
+                        <button class="add-cart">Add To Cart</button>
+                    </div>
+                </div>
+                
+                 <div class="recommend-product-card">
+                    <div class="recommend-product-img">
+                        <img src="images/products_35_2.jpg" style="width: 170px;" alt="">
+                    </div>
+                    <div class="recommend-product-description">
+                        <div class="product-title">Apple Ipad Air 10.9inch wifi 256GB</div>
+                        <div class="product-rating">
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <i class='bx bx-star icon'></i>
+                            <span>( 4 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price"><li>$40.00</li></span>
+                        </div>
+                        <button class="add-cart">Add To Cart</button>
+                    </div>
+                </div>
                 
                 
-                
-            </div>
-
+                </div>
+            </div>  
         </section>
         <!--End of recommend products-->
 

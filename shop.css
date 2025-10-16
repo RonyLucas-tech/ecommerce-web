@@ -90,7 +90,6 @@ body{
     .card-image img {
         width: 100%;
         height: 100%;
-        max-height: 180px;
         object-fit: contain;
         display: block;
         margin: 0 auto;
@@ -98,7 +97,7 @@ body{
     .card-description {
         padding: 1rem 0.5rem;
         text-align: center;
-        width: 100%;
+
     }
     .card-description h3 {
         font-size: 1.1rem;
