@@ -22,6 +22,6 @@
     // Stop countdown when finished
     if (distance < 0) {
       clearInterval(countdown);
-      document.querySelector(".top-deals-header-content").innerHTML = "<h2>Deal Expired!</h2>";
+      document.querySelectorAll(".top-deals-header-content").innerHTML = "<h2>Deal Expired!</h2>";
     }
   }, 1000);

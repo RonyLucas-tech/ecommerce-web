@@ -23,7 +23,6 @@ body{
         align-content: center;
         justify-items: center;
         background-color: #ffffff;
-        border-radius: 1rem;
         box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         padding:1.5rem 0;
         margin: 0 auto;
@@ -55,11 +54,11 @@ body{
 
     .shop-container {
         display: grid;
-        grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
         justify-content: center;
         gap: 0.875rem;
         box-sizing: border-box;
-        margin: 2rem auto;
+               
     }
 
 }

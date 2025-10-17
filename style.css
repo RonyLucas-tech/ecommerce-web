@@ -23,6 +23,7 @@
     --navbar-color: #283b97;
     --font-color: #fff;
     --tertiary-color: #16bcdc;
+    --common-color:#888;
 }
 /*UTILITIES
 .flex{
@@ -1111,19 +1112,19 @@ header{
   position: relative;
   
 }
-.trending-product-card:hover, .recommend-product-card:hover {
+.trending-product-card:hover, .recommend-product-card:hover, .right-card:hover {
      transform: translateY(-6px); 
      box-shadow: 0 10px 24px rgba(0,0,0,0.12); 
 }
 
-.trending-product-img{
+.trending-product-img , .right-card-img{
   position: relative;
   width: 100%;
   height: 180px;          
   overflow: hidden;
 }
 
-.trending-product-img img {
+.trending-product-img img, .right-card-img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1137,7 +1138,7 @@ header{
 }
 
 
-.trending-product-img .main-img {
+.trending-product-img .main-img , .right-card-img .main-img{
   z-index: 2;
   opacity: 1;
   transform: scale(1);
@@ -1145,19 +1146,19 @@ header{
 }
 
 
-.trending-product-img .hover-img {
+.trending-product-img .hover-img, .right-card-img .hover-img{
   z-index: 1;
   opacity: 0;
   transform: scale(1.05);
   pointer-events: none;  
 }
 
-.trending-product-card:hover .trending-product-img .main-img {
+.trending-product-card:hover .trending-product-img .main-img , .right-card:hover .right-card-img .main-img {
   opacity: 0;
   transform: scale(1.08);
 }
 
-.trending-product-card:hover .trending-product-img .hover-img {
+.trending-product-card:hover .trending-product-img .hover-img, .right-card:hover .right-card-img .hover-img {
   opacity: 1;
   transform: scale(1);
 }
@@ -1177,7 +1178,7 @@ header{
   pointer-events: auto; 
 }
 
-.trending-product-card:hover .wishlist, .top-deals-image:hover .wishlist {
+.trending-product-card:hover .wishlist, .top-deals-image:hover .wishlist, .right-card:hover .wishlist {
   opacity: 1;
   transform: translateY(0);
 }

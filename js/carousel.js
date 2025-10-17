@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = carousel.querySelector("#nextBtn");
 
     // Select cards dynamically (works for both blog and trending)
-    const cards = carousel.querySelectorAll(".blog-product-card, .trending-product-card, .recommend-product-card");
+    const cards = carousel.querySelectorAll(".blog-product-card, .trending-product-card, .recommend-product-card, .showcase-cards");
     if (cards.length === 0) return; // skip if no cards found
 
     let currentIndex = 0;
