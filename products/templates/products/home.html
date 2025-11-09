@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +14,10 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
          
-    <link rel="stylesheet" href="style.css">
-<link rel ="sttylesheet" href = "shop.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel ="sttylesheet" href = "{% static 'css/shop.css' %}">
     <title>Ecommerce Website</title>
+    {% load static %}
 </head>
 
 <body>
@@ -109,7 +111,7 @@
                                 <li class="action-text-2">My Wishlist</li>
                             </div>
                         </a>
-                        <a href="#" class="action-icon">
+                        <a href="{% url 'cart' %}" class="action-icon">
                             <i class='bx bx-cart icon'></i>
                             <span class="badge">0</span>
                             <div>
@@ -149,12 +151,12 @@
                         </li>
                         </div>
                         <div class="right-nav-link">
-                            <li class="dropdown-parent"><a href="">HOME <span class="bx bx-chevron-down"></span></a>
+                            <li class="dropdown-parent"><a href="{% url 'home' %}">HOME <span class="bx bx-chevron-down"></span></a>
                             <ul class="dropdown-menu">
                               <div class="menu-content-home">
                                <div class="shop-layout">
                                 <h1>Shop Layout</h1>
-                                <li><a href="">Home1</a></li>
+                                <li><a href="{% url 'home' %}">Home1</a></li>
                                 <li><a href="">Home2</a></li>
                                 <li><a href="">Home3</a></li>
                                 <li><a href="">Home4</a></li>
@@ -187,12 +189,12 @@
                             </ul>
                         </li>
                         
-                        <li class="dropdown-parent"><a href="shop.html">SHOP <span class="bx bx-chevron-down"></span></a>
+                        <li class="dropdown-parent"><a href="{% url 'shop' %}">SHOP <span class="bx bx-chevron-down"></span></a>
                             <ul class="dropdown-menu">
                             <div class="menu-content-shop">
                                <div class="shop-layout">
                                 <h1>Shop Layout</h1>
-                                 <li><a href="shop.html">Shop Default</a></li>
+                                <li><a href="{% url 'shop' %}">Shop Default</a></li>
                                 <li><a href="">Filter On The Left</a></li>
                                 <li><a href="">Filter On The Right</a></li>
                                 <li><a href="">Filter On Top</a></li>
@@ -228,12 +230,12 @@
                             </ul>
                         </li>
 
-                       <li class="dropdown-parent"><a href="">PRODUCT <span class="bx bx-chevron-down"></span></a>
+                       <li class="dropdown-parent"><a href="{% url 'product' %}">PRODUCT <span class="bx bx-chevron-down"></span></a>
                             <ul class="dropdown-menu">
                                 <div class="menu-content-shop">
                                <div class="shop-layout">
                                 <h1>Shop Layout</h1>
-                                 <li><a href="">Shop Default</a></li>
+                                <li><a href="{% url 'product' %}">Shop Default</a></li>
                                 <li><a href="">Filter On The Left</a></li>
                                 <li><a href="">Filter On The Right</a></li>
                                 <li><a href="">Filter On Top</a></li>
@@ -429,7 +431,7 @@
             <div class="hero-container">
                 <div class="hero-main carousel">
                     <div class="carousel-slides">
-                        <div class="carousel-slide active" style="background: url(images/beats.png) right center/cover no-repeat;">
+                        <div class="carousel-slide active" style="background: url('{% static "images/beats.png" %}') right center/cover no-repeat;">
                             <div class="hero-main-description fade-in-right">
                                 <h1>Sport Edition</h1>
                                 <h1>Red Special Edition</h1>
@@ -437,7 +439,7 @@
                                 <button class="hero-btn">Discover Now</button>
                             </div>
                         </div>
-                        <div class="carousel-slide" style="background: url(images/banner_1_3.png) right center/cover no-repeat;">
+                        <div class="carousel-slide" style="background: url('{% static "images/banner_1_3.png" %}') right center/cover no-repeat;">
                             <div class="hero-main-description">
                                 <h1>Phone Samsung 20 Mega Pro</h1>
                                 <li>Infinite Special Offer</li>
@@ -456,28 +458,28 @@
                     </div>
                 </div>
                 <div class="hero-side">
-                    <div class="hero-side-items" style="background: url(images/beats1.png)  right center/cover no-repeat;">
+                    <div class="hero-side-items" style="background: url('{% static "images/beats1.png" %}')  right center/cover no-repeat;">
                         
                         <div class="hero-side-description">
                             <h1>Canyon Star Raider</h1>
                             <li>Headsets & Audio</li>
                         </div>
                     </div>
-                    <div class="hero-side-items"  style="background: url(images/1_2.png) center/cover no-repeat;">
+                    <div class="hero-side-items"  style="background: url('{% static "images/1_2.png" %}') center/cover no-repeat;">
                         
                         <div class="hero-side-description">
                             <h1>Phone Samsung 20</h1>
                             <li>Cellphones and Tablets</li>
                         </div>
                     </div>
-                    <div class="hero-side-items" style="background: url(images/1_3.png) center/cover no-repeat;">
+                    <div class="hero-side-items" style="background: url('{% static "images/1_3.png" %}') center/cover no-repeat;">
                        
                         <div class="hero-side-description">
                             <h1>Galaxy Buds Plus</h1>
                             <li>Wired Earbuds</li>
                         </div>
                     </div>
-                    <div class="hero-side-items" style="background: url(images/chair.png) right center/cover no-repeat;">
+                    <div class="hero-side-items" style="background: url('{% static "images/chair.png" %}') right center/cover no-repeat;">
                         
                         <div class="hero-side-description">
                             <h1>Chair Swoon Lounge</h1>
@@ -500,7 +502,7 @@
                   <button id="nextBtn" class="nav-btn"><i class='bx bx-chevron-right'></i></button>
               
                 <div class="swipe-items">
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="1">
                         <div class="discount-card">
                         <h2>25%</h2>
                         </div>
@@ -510,8 +512,8 @@
                             <i class='bx bx-show'></i> 
                         </div>
                         <div class="trending-product-img">
-                          <img class="main-img" src="images/products_3_2.jpg" alt="">
-                          <img class="hover-img" src="images/products_4_2.jpg" alt="">
+                          <img class="main-img" src="{% static 'images/products_3_2.jpg' %}" alt="">
+                          <img class="hover-img" src="{% static 'images/products_4_2.jpg' %}" alt="">
                         </div>
 
                         <div class="trending-product-description">
@@ -530,15 +532,15 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="2">
                      <div class="wishlist">
                             <i class='bx bx-heart'></i>
                             <i class='bx bx-layer'></i>
                             <i class='bx bx-show'></i>
                         </div>
                          <div class="trending-product-img">
-                          <img class="main-img" src="images/products_4_2.jpg" alt="">
-                          <img class="hover-img" src="images/products_7_4.jpg" alt="">
+                          <img class="main-img" src="{% static 'images/products_4_2.jpg' %}" alt="">
+                          <img class="hover-img" src="{% static 'images/products_7_4.jpg' %}" alt="">
                         </div>
                         <div class="trending-product-description">
                           <div class="product-title">Apple Ipad Air 10.9inch wifi 256GB</div>
@@ -556,7 +558,7 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="3">
                         <div class="discount-card">
                         <h2>25%</h2>
                         </div>
@@ -566,8 +568,8 @@
                             <i class='bx bx-show'></i>
                         </div>
                         <div class="trending-product-img">
-                          <img class="main-img" src="images/products_3_2.jpg" alt="">
-                          <img class="hover-img" src="images/products_30_2.jpg" alt="">
+                          <img class="main-img" src="{% static 'images/products_3_2.jpg' %}" alt="">
+                          <img class="hover-img" src="{% static 'images/products_30_2.jpg' %}" alt="">
                         </div>
                         <div class="trending-product-description">
                           <div class="product-title">Apple Ipad Air 10.9inch wifi 256GB</div>
@@ -585,7 +587,7 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>                    
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="4">
                       <div class="wishlist">
                             <i class='bx bx-heart'></i>
                             <i class='bx bx-layer'></i>
@@ -611,7 +613,7 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="5">
                         <div class="discount-card">
                         <h2>25%</h2>
                         </div>
@@ -640,7 +642,7 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="6">
                        <div class="wishlist">
                             <i class='bx bx-heart'></i>
                             <i class='bx bx-layer'></i>
@@ -666,7 +668,7 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>                  
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="7">
                         <div class="wishlist">
                             <i class='bx bx-heart'></i>
                             <i class='bx bx-layer'></i>
@@ -692,7 +694,7 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>                
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="8">
                         <div class="discount-card">
                         <h2>25%</h2>
                         </div>
@@ -721,7 +723,7 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>              
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="9">
                        <div class="wishlist">
                             <i class='bx bx-heart'></i>
                             <i class='bx bx-layer'></i>
@@ -747,7 +749,7 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>                    
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="10">
                         <div class="wishlist">
                             <i class='bx bx-heart'></i>
                             <i class='bx bx-layer'></i>
@@ -773,7 +775,7 @@
                         </div>
                         <button class="add-cart">Add To Cart</button>
                     </div>                   
-                    <div class="trending-product-card">
+                    <div class="trending-product-card" data-product-id="11">
                         <div class="discount-card">
                         <h2>25%</h2>
                         </div>
@@ -815,7 +817,7 @@
     
             </div>
             <div class="popular">
-                <div class="popular-card" style="background: url(images/cate_1_1.png) center/cover no-repeat;  ">
+                <div class="popular-card" style="background: url('images/cate_1_1.png') center/cover no-repeat;">
                     <div class="popular-card-description">
                         <h2>Door & Furniture</h2>
                         <span>(11 Products)</span>
@@ -876,8 +878,8 @@
                             <i class='bx bx-layer'></i>
                             <i class='bx bx-show'></i>
                         </div>
-                       <img class="main-img" src="images/products_7_4.jpg"  srcset="">
-                        <img class="hover-img" src="images/products_9_2.jpg" alt="">
+                       <img class="main-img" src="{% static 'images/products_7_4.jpg' %}"  srcset="">
+                        <img class="hover-img" src="i{% static 'images/products_9_2.jpg' %}" alt="">
                     </div>
                     <div class="top-deals-description">
                         <div class="top-deals-title">Apple Ipad Air 10.9inch wifi 256GB</div>
@@ -916,8 +918,8 @@
                 <div class ="top-deals-card">
                        
                     <div class="top-deals-image">
-                        <img class="main-img" src="images/products_9_2.jpg" alt="">
-                        <img class="hover-img" src="images/products_7_4.jpg" alt="">
+                        <img class="main-img" src="{% static 'images/products_9_2.jpg' %}" alt="">
+                        <img class="hover-img" src="{% static 'images/products_7_4.jpg' %}" alt="">
                          <div class="wishlist">
                             <i class='bx bx-heart'></i>
                             <i class='bx bx-layer'></i>
@@ -1677,8 +1679,8 @@
             </div>
         </div>    
     </footer>
-    <script src="js/dropdown.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/time.js"></script>
+    <script src="{% static 'js/dropdown.js' %}"></script>
+    <script src="{% static  'js/carousel.js' %}"></script>
+    <script src="{% static 'js/time.js' %}"></script>
 </body>
 </html>

@@ -1,18 +1,21 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">       
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="shop.css">
-    <title>Shop Page</title>
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel ="stylesheet" href = "{% static 'css/shop.css' %}">
+    <title>Ecommerce Website Cart Page</title>
+    {% load static %}
 </head>
 <body>
     <header>
@@ -63,10 +66,12 @@
             <div class="container">
                 <div class="midbar-content">
                     <div class="logo">
-                        <img src="images/logo.png" alt="">
+                      <span class="brand">morata</span>
+                      <span class="badges">MARKET PLACE</span>
                     </div>
-                    <div class="right-content">
-                        <div class="search-component">
+
+                    
+                    <div class="search-component">
                             <div class="categories-selector">
                                 <select name="" id="" class="categories-dropdown">
                                     <option value=" all-categories">All Categories</option>
@@ -83,33 +88,34 @@
                                 <button class="search-button"><i class='bx bx-search'></i></button>
                             </div>
                         </div>
+                    <div class="right-content">
                         <a href="#" class="action-icon">
                             <i class='bx bx-user icon'></i>
                             <div>
                                 <span class="action-text">
                                     Login
                                 </span>
-                                <p class="action-text-2">Account</p>
+                                <li class="action-text-2">Account</li>
                             </div>
                         </a>
                         <a href="#" class="action-icon">
                             <i class='bx bx-heart icon'></i>
-                            <span class="badge">0</span>
-                            <div>
+                          <span class="badge">0</span>
+                              <div>
                                 <span class="action-text">
                                     Favorite
                                 </span>
-                                <p class="action-text-2">My Wishlist</p>
+                                <li class="action-text-2">My Wishlist</li>
                             </div>
                         </a>
-                        <a href="#" class="action-icon">
+                        <a href="cart.html" class="action-icon">
                             <i class='bx bx-cart icon'></i>
                             <span class="badge">0</span>
                             <div>
                                 <span class="action-text">
                                     Your Cart
                                 </span>
-                                <p class="action-text-2">$0.00</p>
+                                <li class="action-text-2">$0.00</li>
                             </div>
                         </a>
                     </div>
@@ -121,12 +127,10 @@
         <!-- Start of Bottom bar -->
         <nav class="bottom-bar">
               <div class="container">
-                <div class="bottom-bar-content">
-                     
-                    
+                <div class="bottom-bar-content">                
                     <ul class="nav-links">
                         <div class="left-nav-link">
-                            <li class="dropdown-parent"><a href=""><span class="bx bx-menu"></span>SHOP BY DEPARTMENT </a>
+                            <li class="dropdown-parent"><a href="">SHOP BY DEPARTMENT <span class="bx bx-menu"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="">Computer & Desktop</a></li>
                                 <li><a href="">Laptop & Ipad</a></li>
@@ -144,7 +148,7 @@
                         </li>
                         </div>
                         <div class="right-nav-link">
-                            <li class="dropdown-parent"><a href="">HOME <span class="bx bx-chevron-down"></span></a>
+                            <li class="dropdown-parent"><a href="{% url 'home' %}">HOME <span class="bx bx-chevron-down"></span></a>
                             <ul class="dropdown-menu">
                               <div class="menu-content-home">
                                <div class="shop-layout">
@@ -223,9 +227,9 @@
                             </ul>
                         </li>
 
-                       <li class="dropdown-parent"><a href="product.html">PRODUCT <span class="bx bx-chevron-down"></span></a>
+                       <li class="dropdown-parent"><a href="">PRODUCT <span class="bx bx-chevron-down"></span></a>
                             <ul class="dropdown-menu">
-                             <div class="menu-content-shop">
+                                <div class="menu-content-shop">
                                <div class="shop-layout">
                                 <h1>Shop Layout</h1>
                                  <li><a href="">Shop Default</a></li>
@@ -313,7 +317,7 @@
                             </svg>
                         </div>
                         <div class="discount-tag">
-                            Sale $20 Off Your First Order.
+                            <li>Sale $20 Off Your First Order</li>
                         </div>
                     </div>
                 </div>
@@ -322,8 +326,8 @@
         <!-- End of Bottom bar -->
          <!--mobile display-->
         <div class="mobile">
-          <div class="top-bar-mobile">
-            <div class="top-mobile">
+          <div class="cardmobile">
+            <div class="c">
                 <div class="menu">
                     <button class="hamburger-btn" id="hamburger-btn">
                         <span class="hamburger-line"></span>
@@ -332,12 +336,12 @@
                     </button>
                 </div>
             </div>
-            <div class="top-mobile">
+            <div class="c">
                 <div class="logo">
                     <img src="images/logo.png" alt="Logo">
                 </div>
             </div>
-            <div class="top-mobile">
+            <div class="c">
                 <div class="mobile-actions">
                     <a href="#" class="mobile-action-icon">
                         <i class='bx bx-user'></i>
@@ -417,188 +421,152 @@
           <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
         </div>     
     </header>
-    <!--END OF HEADER SECTION-->
-    <!--SHOP SECTION--> 
-        <div class="shop-section">
-            <nav class="shop-nav">
-                 <div class="shop-nav-center">
-                    <h1>SHOP</h1>
-                    <span><a href="index.html">HOME</a>/SHOP</span>
-                 </div>
-            </nav>
-          <div class="container">
-            <div class="shop">
-                <div class="shop-container">
-                    
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>                  
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>                 
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop-card">
-                            <div class="card-image">
-                                <img src="images/shop page/shirt.webp" alt="">
-                                <div class="card-description">
-                                    <h3>Hello World</h3>
-                                    <p>Shop Now</p>
-                                </div>
-                            </div>
-                        </div>
-                    
-                </div>
+    <div class="container">
+        <nav class="container-nav">
+                  <h1>YOUR CART</h1>
+                  <span><a href="index.html">HOME</a>/CART</span>
+        </nav>
         
-            </div>  
-            
-        </div> 
-      </div>  
-     
-     <footer>
+        <div class="cart-section">
+             <div class="cart-alert">
+            <p>! Please Hurry Someone has placed an order on some of your items. Products Areb limited PLease Check out</p>
+            </div>
+            <div class="cart">
+            <table id="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>SubTotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="c-info">
+                                    <div class="c-image">
+                                        <img src="images/products_7_4.jpg" srcset="">
+                                    </div>
+                                    <div class="c-title"><p>Apple Ipad Air 10.9inch wifi 256GB</p>
+                                     <div class="c-price">
+                                       <span class="current-price">$40.00</span>
+                                    </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="quantity">
+                                    <button class="quantity-btn">-</button>
+                                    <input type="text" class="quantity-input" value="1" readonly>
+                                    <button class="quantity-btn">+</button>>
+                                </div>
+                            </td>
+                            <td> 
+                             <div class="price">
+                                <div class="total-price">$166.99</div>
+                               <button class="remove-btn">×</button>
+                             </div>
+                           </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-info">
+                                    <div class="c-image">
+                                        <img src="images/products_7_4.jpg" srcset="">
+                                    </div>
+                                    <div class="c-title"><p>Apple Ipad Air 10.9inch wifi 256GB</p>
+                                     <div class="c-price">
+                                       <span class="current-price">$40.00</span>
+                                    </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="quantity">
+                                    <button class="quantity-btn">-</button>
+                                    <input type="text" class="quantity-input" value="1" readonly>
+                                    <button class="quantity-btn">+</button>>
+                                </div>
+                            </td>
+                            <td> 
+                             <div class="price">
+                                <div class="total-price">$166.99</div>
+                               <button class="remove-btn">×</button>
+                             </div>
+                           </td>
+                        </tr>
+                    </tbody>
+            </table>
+            <div id="cart-totals">
+                <div class="container">
+                    <div class="progress-container">
+                        <div class="progressbar">
+                        </div>
+                        <div class="prog-icon"><i class="bx bx-heart"></i></div>
+                        <div class="progressbar-details">
+                            <li>Spend $400 more and get <a href="">free Shipping</a></li> 
+                        </div>
+                    </div>
+                    <div class="total"><p>Cart Totals</p></div>
+                    <div class="subtotal"> <p>Sub Totals</p><span class="subtotal">$4000</span></div>
+                    <form action="">
+                        <h1>Estimated Shipping Rates</h1>
+                        <div class="input">
+                            <label for="">Country</label>
+                            <select name="country" id="country">
+                                <option value="Uganda">Uganda</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="Kenya">Kenya</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <label for="">State</label>
+                            <select name="country" id="country">
+                                <option value="Uganda">Uganda</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="Kenya">Kenya</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <label for="">Zip Code</label>
+                            <input type="number" name="text" id="" placeholder="Zip / Postal Code">
+                        </div>
+                        <input type="submit" value="Calculate Shipping Rates">
+                    </form>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer>
         <div class="container">
-            <!--top footer-->
-            <div class="top-footer">
-                <div class="top-fotter-icons"><span><i class="bx bx-support" aria-label="Support" title="Free Delivery"></i></span><div class="top-fotter-description"><h1>Free Delivery</h1><p>For All Orders Over $300</p></div></div>
-                <div class="top-fotter-icons"><span><i class="bx bx-credit-card" aria-label="Credit Card" title="Safe Payments"></i></span><div class="top-fotter-description"><h1>Secure Payments</h1><p>100% Secure Payments</p></div></div>
-                <div class="top-fotter-icons"><span><i class="bx bx-message" aria-label="Message" title="24/7 Help Center"></i></span><div class="top-fotter-description"><h1>24/7 Help Center</h1><p>Dedicated 24/7 Support</p></div></div>
-                <div class="top-fotter-icons"><span><i class="bx bx-dollar-circle" aria-label="Dollar" title="Shop With Confidence"></i></span><div class="top-fotter-description"><h1>Shop With Confidence</h1><p>If Goods have Problem</p></div></div>
+            <!--c-->
+            <div class="c">
+                <div class="cardicons"><span><i class="bx bx-support" aria-label="Support" title="Free Delivery"></i></span><div class="carddescription"><h1>Free Delivery</h1><li>For All Orders Over $300</li></div></div>
+                <div class="cardicons"><span><i class="bx bx-credit-c" aria-label="Credit Card" title="Safe Payments"></i></span><div class="carddescription"><h1>Secure Payments</h1><li>100% Secure Payments</li></div></div>
+                <div class="cardicons"><span><i class="bx bx-message" aria-label="Message" title="24/7 Help Center"></i></span><div class="carddescription"><h1>24/7 Help Center</h1><li>Dedicated 24/7 Support</li></div></div>
+                <div class="cardicons"><span><i class="bx bx-dollar-circle" aria-label="Dollar" title="Shop With Confidence"></i></span><div class="carddescription"><h1>Shop With Confidence</h1><li>If Goods have Problem</li></div></div>
             </div>
             <div class="mid-footer">
                 <!--download section-->
                 <div class="download">
                     <h1>Download App</h1>
-                    <p>Morata App is now Available on PlayStore and GooglePlay it Now</p>
+                    <li>Morata App is now Available on PlayStore and GooglePlay it Now</li>
                     <div class="download-btn">
                         <a href="">
                             <span><i class="bx bxl-apple" aria-label="Apple Store" title="Apple Store"></i></span>
                             <div class="btn">
-                                <p>Download it from</p>
+                                <li>Download it from</li>
                                 <h3>APPLESTORE</h3>
                             </div>
                         </a>
                         <a href="">
                             <span><i class="bx bxl-play-store" aria-label="Google Play" title="Google Play"></i></span>
                             <div class="btn">
-                                <p>Download it from</p>
+                                <li>Download it from</li>
                                 <h3>GOOGLEPLAY</h3>
                             </div>
                         </a>
@@ -651,12 +619,12 @@
                 <!--newsletter-->
                 <div class="newsletter">
                     <h1>SignUp to Your Newsletter</h1>
-                    <p>Join 60000+ subscribers and get a new discount Coupon on every Saturday</p>
+                    <li>Join 60000+ subscribers and get a new discount Coupon on every Saturday</li>
                     <div class="newsletter-submit">
                         <input type="email" name="" id="">
                         <input type="submit" value="subscribe">
                     </div>
-                    <p>By providing Email Address your Agreeing  to our Privacy Policy And Terms of Service</p>
+                    <li>By providing Email Address your Agreeing  to our Privacy Policy And Terms of Service</li>
                 </div>
             </div>
             <div class="bottom-footer">
@@ -678,7 +646,6 @@
                     </div>
             </div>
         </div>    
-     </footer>
-    <script src="js/dropdown.js"></script>          
+    </footer>
 </body>
 </html>

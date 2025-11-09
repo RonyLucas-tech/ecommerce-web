@@ -1,5 +1,6 @@
+{% load static %}
 <!DOCTYPE html>
-`<html lang="en">
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -10,9 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">       
-    <link rel="stylesheet" href="product.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+    <link rel ="stylesheet" href = "{% static 'css/product.css' %}">
     <title>Product Page</title>
+{% load static %}    
 </head>
 <body>
     <header>
@@ -105,7 +107,7 @@
                                 <li class="action-text-2">My Wishlist</li>
                             </div>
                         </a>
-                        <a href="#" class="action-icon">
+                        <a href="cart.html" class="action-icon">
                             <i class='bx bx-cart icon'></i>
                             <span class="badge">0</span>
                             <div>
@@ -421,7 +423,7 @@
     <div class="container">
         <div class="product-section">
              <nav class="product-nav">
-            <span><p>Products/</p><a href="">Home</a></span>
+            <span><p>Products/</p><a href="{% url 'home' %}">Home</a></span>
         </nav>
         </div>
                <!--Carousel content product section-->
@@ -430,13 +432,13 @@
                         <button id="prevBtn" class="nav-btn"><i class='bx bx-chevron-left'></i></button>
                         <button id="nextBtn" class="nav-btn"><i class='bx bx-chevron-right'></i></button>
                         <div class="product-showcase-cards swipe-items">
-                            <div class="showcase-cards"><img src="images/shop page/apple13.webp" alt=""><p>Smart Phone</p></div>
-                            <div class="showcase-cards"><img src="images/shop page/pad.webp" alt=""><p>Ipad</p></div>
-                            <div class="showcase-cards"><img src="images/shop page/pods.webp" alt=""><p>Air Pods</p></div>
-                            <div class="showcase-cards"><img src="images/shop page/screen.webp" alt=""><p>Screens</p></div>
-                            <div class="showcase-cards"><img src="images/shop page/shirt.webp" alt=""><p>Fashion</p></div>
-                            <div class="showcase-cards"><img src="images/shop page/tv.webp" alt=""><p>Amazon 3D</p></div>
-                            <div class="showcase-cards"><img src="images/shop page/watch.webp" alt=""><p>Aplle Watch</p></div>       
+                            <div class="showcase-cards"><img src="{% static 'images/shop page/apple13.webp' %}" alt=""><p>Smart Phone</p></div>
+                            <div class="showcase-cards"><img src="{% static 'images/shop page/pad.webp' %}" alt=""><p>Ipad</p></div>
+                            <div class="showcase-cards"><img src="{% static 'images/shop page/pods.webp' %}" alt=""><p>Air Pods</p></div>
+                            <div class="showcase-cards"><img src="{% static 'images/shop page/screen.webp' %}" alt=""><p>Screens</p></div>
+                            <div class="showcase-cards"><img src="{% static 'images/shop page/shirt.webp' %}" alt=""><p>Fashion</p></div>
+                            <div class="showcase-cards"><img src="{% static 'images/shop page/tv.webp' %}" alt=""><p>Amazon 3D</p></div>
+                            <div class="showcase-cards"><img src="{% static 'images/shop page/watch.webp' %}" alt=""><p>Aplle Watch</p></div>       
                         </div>
                     </div>
                 </div>
@@ -480,7 +482,7 @@
                                 <div class="availability">
                                     <div class="left-card-nav">
                                      <p>-  AVAILABILITY</p>
-                                     <button>Reset</button>
+                                     <button>RESET</button>
                                     </div>
                                     <div class="filter-checker">
                                      <span><input type="checkbox" name="" id=""><a href="">In Stock (1)</a></span>
@@ -489,8 +491,8 @@
                                 </div>
                                 <div class="price">
                                     <div class="left-card-nav">
-                                     <p>-  Price</p>
-                                     <button>Reset</button>
+                                     <p>-  PRICE</p>
+                                     <button>RESET</button>
                                     </div>
                                     <div class="price-view">
                                         <h1>The Highest Price is <em>$15900</em></h1>
@@ -505,45 +507,201 @@
                                 </div>
                                 <div class="color">
                                     <div class="left-card-nav">
-                                     <p>-  Color</p>
-                                     <button>Reset</button>
+                                     <p>-  COLOR</p>
+                                     <button>RESET</button>
                                     </div>
-                                    <div class="color-checkers">
-                                        <input type="color" name="" id="red">
-                                        <input type="color" name="" id="blue">
-                                        <input type="color" name="" id="black">
-                                        <input type="color" name="" id="green">
-                                        <input type="color" name="" id="white">
-                                        <input type="color" name="" id="pink">
-                                        <input type="color" name="" id="orange">
-                                        <input type="color" name="" id="navy">
+                                    <div class="color-container">
+                                         <div class="color-options">
+                                            <span class="color-dot" data-color="red" style="background-color: red;"></span>
+                                            <span class="color-dot" data-color="blue" style="background-color: blue;"></span>
+                                            <span class="color-dot" data-color="black" style="background-color: black;"></span>
+                                            <span class="color-dot" data-color="white" style="background-color: white; border: 1px solid #ccc;"></span>
+                                            <span class="color-dot" data-color="orange" style="background-color: orange;"></span>
+                                            <span class="color-dot" data-color="navy" style="background-color: navy; border: 1px solid #ccc;"></span>
+                                            <span class="color-dot" data-color="red" style="background-color: red;"></span>
+                                            <span class="color-dot" data-color="blue" style="background-color: blue;"></span>
+                                            <span class="color-dot" data-color="black" style="background-color: black;"></span>
+                                            <span class="color-dot" data-color="white" style="background-color: white; border: 1px solid #ccc;"></span>
+                                            <span class="color-dot" data-color="orange" style="background-color: orange;"></span>
+                                            <span class="color-dot" data-color="navy" style="background-color: navy; border: 1px solid #ccc;"></span>
+                                        </div>                                    
                                     </div>
                                 </div>
-                              </div>
+                                <div class="brand">
+                                    <div class="left-card-nav">
+                                     <p>-  BRAND</p>
+                                     <button>RESET</button>
+                                    </div>
+                                    <div class="brand-checker">
+                                        <span><input type="checkbox" name="" id=""><li>Berry<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Tecno<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Samsung<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Dell<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Apple<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Berry<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Wndows<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Google<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Berry<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Ipad<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Fashion<a href="">(23)</a></li></span>
+                                    </div>
+                                </div>
+                                <div class="size">
+                                    <div class="left-card-nav">
+                                     <p>-  SIZE</p>
+                                     <button>RESET</button>
+                                    </div>
+                                    <div class="size-container">
+                                        <span class="size-option"><li>128GB<a href="">(23)</a></li></span>
+                                        <span class="size-option"><li>1TB<a href="">(23)</a></li></span>
+                                        <span class="size-option"><li>256GB<a href="">(23)</a></li></span>
+                                    </div>
+                                </div>
+                                <div class="brand">
+                                    <div class="left-card-nav">
+                                     <p>-  PRODUCT TYPE </p>
+                                     <button>RESET</button>
+                                    </div>
+                                    <div class="brand-checker">
+                                        <span><input type="checkbox" name="" id=""><li>Berry<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Tecno<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Samsung<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Dell<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Apple<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Berry<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Wndows<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Google<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Berry<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Ipad<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Fashion<a href="">(23)</a></li></span>
+                                    </div>
+                                </div>
+                                <div class="brand">
+                                    <div class="left-card-nav">
+                                     <p>-  TAGS</p>
+                                     <button>RESET</button>
+                                    </div>
+                                    <div class="brand-checker">
+                                        <span><input type="checkbox" name="" id=""><li>Berry<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Tecno<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Samsung<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Dell<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Apple<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Berry<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Wndows<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Google<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Berry<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Ipad<a href="">(23)</a></li></span>
+                                        <span><input type="checkbox" name="" id=""><li>Fashion<a href="">(23)</a></li></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>    
                     </div>
                     <div class="product-card">
-                        <div class="product-card">
-                        <div class="product-card-nav">
-                            <h1>Product Categories</h1>
+                        <div class="container-card">
+                            <div class="product-card-nav">
+                              <h1>Filled By</h1>
+                            </div>
                         </div>
-                        <ul class="product-list">
-                            <li><a href="">Babies and Mom (26)</a></li>
-                            <li><a href="">Electrical and Appliances (39)</a></li>
-                            <li><a href="">Phones and Accessories (90)</a></li>
-                            <li><a href="">Clothings and Fashion(33)</a></li>
-                            <li><a href="">Furniture (20)</a></li>
-                            <li><a href="">Tablets and Home (07)</a></li>
-                            <li><a href="">Babies and Mom (26)</a></li>
-                            <li><a href="">Electrical and Appliances (39)</a></li>
-                            <li><a href="">Phones and Accessories (90)</a></li>
-                            <li><a href="">Clothings and Fashion(33)</a></li>
-                            <li><a href="">Furniture (20)</a></li>
-                            <li><a href="">Tablets and Home (07)</a></li>
-                        </ul>
+                        <div class="top-featured-product small-card">
+                            <div class="top-featured-image">
+                              <img src="images/products_5_2.jpg" style="width:100px;height:100px;" srcset="">
+                            </div>
+                            <div class="top-featured-description">
+                              <div class="top-featured-title">Apple Ipad Air 10.9inch wifi 256GB</div>
+                              <div class="top-featured-rating">
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                              </div>
+                              <div class="top-featured-price">
+                                 <span class="current-price"><li>$40.00<del style="color: #777;">$500</del></li></span>
+                              </div>
+                            </div>
+                            <div class="discount-card">
+                               <h2>25%</h2>
+                            </div>
+                        </div>
+                        <div class="top-featured-product small-card">
+                            <div class="top-featured-image">
+                              <img src="images/products_9_2.jpg" style="width:100px;height:100px;" srcset="">
+                            </div>
+                            <div class="top-featured-description">
+                              <div class="top-featured-title">Apple Ipad Air 10.9inch wifi 256GB</div>
+                              <div class="top-featured-rating">
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                              </div>
+                              <div class="top-featured-price">
+                                 <span class="current-price"><li>$40.00<del style="color: #777;">$500</del></li></span>
+                              </div>
+                            </div>
+                            <div class="discount-card">
+                               <h2>25%</h2>
+                            </div>
+                        </div>
+                        <div class="top-featured-product small-card">
+                            <div class="top-featured-image">
+                              <img src="images/products_11_2.jpg" style="width:100px;height:100px;" srcset="">
+                            </div>
+                            <div class="top-featured-description">
+                              <div class="top-featured-title">Apple Ipad Air 10.9inch wifi 256GB</div>
+                              <div class="top-featured-rating">
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                              </div>
+                              <div class="top-featured-price">
+                                 <span class="current-price"><li>$40.00<del style="color: #777;">$500</del></li></span>
+                              </div>
+                            </div>
+                            <div class="discount-card">
+                               <h2>25%</h2>
+                            </div>
+                        </div>
+                        <div class="top-featured-product small-card">
+                            <div class="top-featured-image">
+                              <img src="images/products_7_4.jpg" style="width:100px;height:100px;" srcset="">
+                            </div>
+                            <div class="top-featured-description">
+                              <div class="top-featured-title">Apple Ipad Air 10.9inch wifi 256GB</div>
+                              <div class="top-featured-rating">
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                                <i class='bx bx-star icon'></i>
+                              </div>
+                              <div class="top-featured-price">
+                                 <span class="current-price"><li>$40.00<del style="color: #777;">$500</del></li></span>
+                              </div>
+                            </div>
+                            <div class="discount-card">
+                               <h2>25%</h2>
+                            </div>
+                        </div>
+                        
+
                     </div>
+                    <div class="product-card" style="height: 300px;" margin-top="2.5rem;">
+                        <div class="menu-card">
+                            <img src="images/technology.webp" alt="" srcset="">
+                            <div class="menu-description">
+                                <h1>Special Offer!</h1>
+                                <p>Save up to 50% off all Electronics Products</p>
+                                <button class="shop-now-btn">Shop Now</button>
+                            </div>
+                        </div>
                     </div>
-                    
+
                 </div>
             </div>
              <!--right product cards-->
@@ -1379,5 +1537,6 @@
      <script src="js/dropdown.js"></script>  
      <script src="js/carousel.js"></script>
      <script src="js/time.js"></script>
+     <script src="js/productfetch.js/script>
 </body>
 </html>

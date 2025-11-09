@@ -94,7 +94,7 @@ body {
     display: none;
 }
 body {
-    background-color: #f8f5f5;
+    background-color: whitesmoke;
     font-family: 'Poppins', sans-serif;
    
 }
@@ -234,7 +234,7 @@ header{
             }            
             .brand::after{
                 content: ".";
-                color: #f01000;
+                color: var(--tertiary-color);
                 position: absolute;
                 font-weight: bold;
             }
@@ -242,7 +242,7 @@ header{
             .badges {
                 position: absolute;
                 width: 70px;
-                background-color: #ff0000;  /* red badge color */
+                background-color: var(--tertiary-color);  /* red badge color */
                 color: #fff;
                 padding: 2px 5px;
                 font-size: 0.75rem;
@@ -259,7 +259,7 @@ header{
                 top: 50%;
                 transform: translateY(-55%);
                 border: 6px solid transparent;
-                border-right-color: #Ff0000;  /* arrow pointing left: the right edge of the triangle is colored red */
+                border-right-color: var(--tertiary-color);  /* arrow pointing left: the right edge of the triangle is colored red */
             }
         }
         /*=========SEARCH SECTION===========*/
@@ -303,7 +303,7 @@ header{
                     top: 15%;
                     right: 5px;
                     padding: 0.75rem  1rem;
-                    background-color: var(--navbar-color);
+                    background-color: var(--tertiary-color);
                     border: none;
                     border-radius: 5px;
                     i{
@@ -339,7 +339,7 @@ header{
                     position: absolute;
                     top: 0;
                     left: 2rem;
-                    background-color: #e90303;
+                    background-color: var(--tertiary-color);
                     border-radius: 50%;
                     padding:0.45rem;
                     color: var(--font-color);                
@@ -812,6 +812,7 @@ header{
     max-width: 1365px;
     margin:0 auto;
     padding:1rem 0;
+    
 
 }
 
